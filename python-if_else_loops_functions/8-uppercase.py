@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def uppercase_test(input_str):
+def uppercase(input_str):
     result_str = ""
 
     for char in input_str:
