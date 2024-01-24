@@ -10,4 +10,7 @@ def uppercase(input_str):
         else:
             result_str += char
 
-    print(result_str, end='\n')
+    print(result_str.format(), end='\n')
+
+uppercase("best")
+uppercase("Best School 98 Battery street")
