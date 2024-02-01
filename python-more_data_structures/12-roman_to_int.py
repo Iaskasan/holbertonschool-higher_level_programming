@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
         else:
             prev_value = roman_numbers[roman_string[i - 1]]
         if value > prev_value:
-            result -= value
-        else:
             result += value
+        else:
+            result -= value
     return abs(result)
