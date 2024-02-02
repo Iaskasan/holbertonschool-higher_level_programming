@@ -11,14 +11,16 @@ def roman_to_int(roman_string):
                      'D': 500,
                      'M': 1000}
     result = 0
+    next_value = 0
     for i in range(len(roman_string)):
-        value = roman_numbers[roman_string[i]]
-        if result == 0:
-            prev_value = value
-        else:
-            prev_value = roman_numbers[roman_string[i - 1]]
-        if value > prev_value:
+        try:
+            value = roman_numbers[roman_string[i]]
+            next_value = roman_numbers[roman_string[i + 1]]
+            if value < next_value:
+                result -= value
+            else:
+                result += value
+        except IndexError:
             result += value
-        else:
-            result -= value
-    return abs(result)
+
+    return result
