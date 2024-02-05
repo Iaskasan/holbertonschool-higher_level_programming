@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from typing import overload
 """defines a Square class"""
 
 
