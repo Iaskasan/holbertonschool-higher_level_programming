@@ -17,7 +17,6 @@ class Square:
     def area(self):
         return self.size ** 2
 
-
     @size.setter
     def size(self, value):
         """This the self where you can eat"""
@@ -26,7 +25,6 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
 
     def my_print(self):
         if self.size == 0:
