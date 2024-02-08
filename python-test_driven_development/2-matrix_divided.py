@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         if str == "div":
             raise TypeError("div must be a number")
         if str == "div0":
-            raise TypeError("division by zero")
+            raise ZeroDivisionError("division by zero")
 
     if not isinstance(matrix, list):
         err("list")
