@@ -7,19 +7,23 @@ class Square:
     pass
 
     def __init__(self, size=0, position=(0, 0)):
+        """This the self where you can eat"""
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
+        """This the self where you can eat"""
         return self.__size
 
     @property
     def area(self):
+        """This the self where you can eat"""
         return self.size ** 2
 
     @property
     def position(self):
+        """This the self where you can eat"""
         return self.__position
 
     @size.setter
@@ -39,6 +43,7 @@ class Square:
         self.__position = value
 
     def my_print(self):
+        """This the self where you can eat"""
         first_element = self.position[0]
         if not self.size:
             print()
