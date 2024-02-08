@@ -39,7 +39,7 @@ class Square:
 
     def my_print(self):
         first_element = self.position[0]
-        if self.size == 0:
+        if not self.size:
             print()
         for j in range(self.position[1]):
             print()
