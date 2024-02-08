@@ -7,7 +7,7 @@ def matrix_divided(matrix, div):
     def err(str):
         if str == "list":
             raise TypeError("matrix must be a matrix\
-            (list of lists) of integers/floats")
+(list of lists) of integers/floats")
         if str == "row":
             raise TypeError("Each row of the matrix must have the same size")
         if str == "div":
