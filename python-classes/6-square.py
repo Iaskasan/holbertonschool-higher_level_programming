@@ -44,10 +44,13 @@ class Square:
 
     def my_print(self):
         """This the self where you can eat"""
-        first_element = self.position[0]
-        if not self.size:
-            print()
-        for j in range(self.position[1]):
-            print()
-        for i in range(self.size):
-            print(" " * first_element + "#" * self.size)
+        try:
+            first_element = self.position[0]
+            if not self.size:
+                print()
+            for j in range(self.position[1]):
+                print()
+            for i in range(self.size):
+                print(" " * first_element + "#" * self.size)
+        except TypeError:
+            raise TypeError("position must be a tuple of 2 positive integers")
