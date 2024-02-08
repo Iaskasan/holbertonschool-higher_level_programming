@@ -18,8 +18,9 @@ def matrix_divided(matrix, div):
 
     if not isinstance(matrix, list):
         err("list")
-    if type(matrix[0]) is list:
-        ref_size = len(matrix[0])
+    if len(matrix) == 0:
+        err("list")
+    ref_size = len(matrix[0])
     for row in matrix:
         if not isinstance(row, list):
             err("list")
