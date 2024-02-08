@@ -4,10 +4,11 @@
 
 def matrix_divided(matrix, div):
     """matrix reloaded"""
+    t = "matrix must be a matrix (list of lists) of integers/floats"
+
     def err(str):
         if str == "list":
-            raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
+            raise TypeError(t)
         if str == "row":
             raise TypeError("Each row of the matrix must have the same size")
         if str == "div":
