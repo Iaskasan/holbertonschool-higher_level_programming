@@ -31,7 +31,7 @@ def matrix_divided(matrix, div):
                 err("list")
     if not isinstance(div, (int, float)):
         err("div")
-    if div == 0:
+    if not div:
         err("div0")
 
     matrix_divided = [[round((nb / div), 2) for nb in row] for row in matrix]
