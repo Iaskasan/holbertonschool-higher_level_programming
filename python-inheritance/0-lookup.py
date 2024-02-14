@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""dir module"""
+
+
 def lookup(obj):
-    l_obj = list(dir(obj))
-    return l_obj
+    """dir function"""
+    return dir(obj)
