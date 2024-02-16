@@ -3,7 +3,7 @@
 import json
 
 
-def save_to_json_file(my_obj, filename):
+def load_from_json_file(filename):
     """_summary_
 
     Args:
@@ -11,4 +11,4 @@ def save_to_json_file(my_obj, filename):
         filename (_type_): _description_
     """
     with open(filename, "r") as f:
-        json.load(my_obj, f)
+        json.load(f)
