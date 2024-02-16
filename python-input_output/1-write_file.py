@@ -10,4 +10,5 @@ def write_file(filename="", text=""):
         text (str, optional): _description_. Defaults to "".
     """
     with open(filename, "w") as f:
-        f.write(text)
+        len = f.write(text)
+        return len
