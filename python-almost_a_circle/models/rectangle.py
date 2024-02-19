@@ -68,9 +68,9 @@ class Rectangle(Base):
 
     def display(self):
         """this should be enough"""
-        bool = False
-        for i in range(self.height):
-            print("#" * self.width)
+        print("\n" * self.y, end="")
+        for j in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """the __str__ method"""
