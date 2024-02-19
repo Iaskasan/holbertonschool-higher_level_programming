@@ -16,32 +16,40 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """rectangle class file"""
         return self.__width
 
     @property
     def height(self):
+        """rectangle class file"""
         return self.__height
 
     @property
     def x(self):
+        """rectangle class file"""
         return self.__x
 
     @property
     def y(self):
+        """rectangle class file"""
         return self.__y
 
     @width.setter
     def width(self):
+        """rectangle class file"""
         pass
 
     @height.setter
     def height(self):
+        """rectangle class file"""
         pass
 
     @x.setter
     def x(self):
+        """rectangle class file"""
         pass
 
     @y.setter
     def y(self):
+        """rectangle class file"""
         pass
