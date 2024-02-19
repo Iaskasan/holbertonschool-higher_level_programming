@@ -65,3 +65,9 @@ class Rectangle(Base):
     def area(self):
         """please check this"""
         return self.__width * self.__height
+
+    def display(self):
+        """this should be enough"""
+        bool = False
+        for i in range(self.height):
+            print("#" * self.width)
