@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """rectangle class file"""
 from base import Base
+"""rectangle class file"""
 
 
 class Rectangle(Base):
