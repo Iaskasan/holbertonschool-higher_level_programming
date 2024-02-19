@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """rectangle class file"""
-from base import Base
+from models.base import Base
 """rectangle class file"""
 
 
