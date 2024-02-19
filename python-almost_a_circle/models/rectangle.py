@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-from models.base import Base
+"""rectangle class file"""
+from base import Base
 """rectangle class file"""
 
 
