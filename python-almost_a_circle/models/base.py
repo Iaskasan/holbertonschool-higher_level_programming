@@ -2,6 +2,7 @@
 """base class file"""
 from json import dumps, loads
 
+
 class Base:
     """class Based"""
     __nb_objects = 0
