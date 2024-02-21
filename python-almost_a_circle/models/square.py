@@ -45,3 +45,8 @@ class Square(Rectangle):
         else:
             if "size" in kwargs:
                 self.size = kwargs["size"]
+
+    def to_dictionary(self):
+        """jimmy neutron"""
+        dict = {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
+        return dict
