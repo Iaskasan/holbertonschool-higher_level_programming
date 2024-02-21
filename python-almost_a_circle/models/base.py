@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """base class file"""
-
+from json import dumps, loads
 
 class Base:
     """class Based"""
@@ -12,3 +12,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """faut pas copier les githubs"""
+        if list_dictionaries is None:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
