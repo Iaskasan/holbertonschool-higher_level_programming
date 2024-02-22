@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """base class file"""
-from json import dumps, loads, dump
+from json import dumps, loads, dump, load
 
 
 class Base:
@@ -38,3 +38,9 @@ class Base:
         else:
             string = loads(json_string)
         return string
+
+    @classmethod
+    def create(cls, **dictionary):
+        instance = cls(4, 1)
+        instance.update(**dictionary)
+        return instance
