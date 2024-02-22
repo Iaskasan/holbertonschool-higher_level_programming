@@ -34,5 +34,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if json_string is None:
-            return "[]"
-        return loads(json_string)
+            string = json_string = []
+        else:
+            string = loads(json_string)
+        return string
