@@ -4,5 +4,5 @@ def uppercase(c):
         ascii = ord(char)
         if ascii > 96:
             ascii -= 32
-        print(chr(ascii), end='')
-    print()
+        print(chr(ascii), end=''.format())
+    print("n".format())
