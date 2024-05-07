@@ -18,10 +18,10 @@ def parser(a, op, b):
 
 
 if __name__ == "__main__":
-    operator = argv[2]
     if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+    operator = argv[2]
     if operator not in ["+", "*", "-", "/"]:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
