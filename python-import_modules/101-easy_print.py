@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-from sys import stdout
-output = stdout.write("#pythoniscool\n")
+from os import write; write(1, "#pythoniscool\n".encode())
