@@ -161,3 +161,4 @@ cython_debug/
 
 *_*.py
 .gitignore
+hidden_4.pyc
