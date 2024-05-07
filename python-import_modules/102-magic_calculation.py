@@ -4,4 +4,5 @@ from dis import dis
 
 
 def magic_calculation(a, b):
-    dis(a, b)
+    dis(a)
+    dis(b)
