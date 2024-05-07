@@ -4,4 +4,6 @@ from dis import dis
 
 
 def magic_calculation(a, b):
-    dis(magic_calculation)
+    bytecode = dis(magic_calculation)
+    for instr in bytecode:
+        print(instr.opname)
