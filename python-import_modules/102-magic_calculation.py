@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
-from dis import dis
+from magic_calculation_102 import add, sub
 
 
 def magic_calculation(a, b):
-    bytecode = dis(magic_calculation)
-    for instr in bytecode:
-        print(instr.opname)
+    if a < b:
+        c = add(a, b)
+        for i in range(4, 6):
+            c = add(c, i)
+            return c
+        sub(a, b)
+        return
