@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str:
+    if roman_string is None or type(roman_string) is not str:
         return 0
     dict = {
         "I": 1,
