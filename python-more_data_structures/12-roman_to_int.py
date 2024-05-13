@@ -18,6 +18,9 @@ def roman_to_int(roman_string):
         if i + 1 < len(str_list):
             if str_list[i + 1] != "I" and str_list[i] == "I":
                 Bool = True
+            if str_list[i] == "X" and str_list[i + 1] == "C":
+                result -= 19
+                Bool = True
         for key, value in dict.items():
             if Bool:
                 result -= 1
