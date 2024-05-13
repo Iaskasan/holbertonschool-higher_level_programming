@@ -15,8 +15,8 @@ def roman_to_int(roman_string):
     str_list = list(roman_string)
     Bool = False
     for i in range(len(str_list)):
-        if len(str_list) > 1:
-            if str_list[i] == "I" and str_list[-1] != "I":
+        if i + 1 < len(str_list):
+            if str_list[i + 1] != "I":
                 Bool = True
         for key, value in dict.items():
             if Bool:
