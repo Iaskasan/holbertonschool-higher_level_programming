@@ -34,6 +34,8 @@ class Square:
         '''prints the square with "#" as character'''
         if not self.size:
             print()
+        if self.position[1] < 0:
+            print()
         for _ in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
 
