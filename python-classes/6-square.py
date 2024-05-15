@@ -10,7 +10,7 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """this is the constructor"""
         self.__size = size
-        self.__position = position
+        self.position = position
 
     def area(self):
         """square the size of the square and returns an int"""
@@ -44,9 +44,8 @@ class Square:
 
     @position.setter
     def position(self, value):
-        for element in value:
-            if element < 0 or not int:
-                if len(value) > 2:
-                    raise TypeError("position must be a \
-                                    tuple of 2 positive integers")
-        self.__position = value
+        if isinstance(value, tuple) and len(value) == 2\
+                and all(isinstance(element, int) for element in value):
+            self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
