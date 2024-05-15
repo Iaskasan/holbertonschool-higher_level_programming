@@ -34,9 +34,8 @@ class Square:
         '''prints the square with "#" as character'''
         if not self.size:
             print()
-        else:
-            for _ in range(self.size):
-                print(" " * self.position[0] + "#" * self.size)
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
 
     @property
     def position(self):
