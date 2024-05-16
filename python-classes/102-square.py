@@ -29,17 +29,17 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    def __eq__(self, size) -> int:
-        return self.size
+    def __eq__(self, other_class) -> int:
+        return self.size == other_class.size
 
-    def __lt__(self, size):
-        return self.size
+    def __lt__(self, other_class):
+        return self.size < other_class.size
 
-    def __le__(self, size):
-        return self.size
+    def __le__(self, other_class):
+        return self.size <= other_class.size
 
-    def __gt__(self, size):
-        return self.size
+    def __gt__(self, other_class):
+        return self.size > other_class.size
 
-    def __ge__(self, size):
-        return self.size
+    def __ge__(self, other_class):
+        return self.size >= other_class.size
