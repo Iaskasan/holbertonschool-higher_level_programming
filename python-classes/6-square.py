@@ -1,54 +1,50 @@
 #!/usr/bin/python3
-"""building the class square"""
+"""this script write a class Square that defines a square """
 
 
 class Square:
-    """This is the class Square
+    """this class defines a square"""
 
-    The class is not yet complete
-    """
     def __init__(self, size=0, position=(0, 0)):
-        """this is the constructor"""
         self.__size = size
-        self.position = position
-
-    def area(self):
-        """square the size of the square and returns an int"""
-        return self.__size ** 2
+        self.__position = position
 
     @property
     def size(self):
-        '''class method to retrieve or modify the value of size'''
         return self.__size
+
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if isinstance(value, tuple) and len(value) == 2 \
+            and all(isinstance(elem, int) and elem >= 0 for elem in value):
+            self._position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     @size.setter
     def size(self, value):
-        '''checks if the input is an int and > 0'''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def area(self):
+        return self.__size ** 2
+
     def my_print(self):
-        '''prints the square with "#" as character'''
-        if not self.size or self.position[1] > 0:
+        if self.size == 0:
             print()
-        for _ in range(self.size):
-            print(" " * self.position[0] + "#" * self.size)
-
-    @property
-    def position(self):
-        """returns a tuple with 2 positive integers"""
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """checks if position is a tuple with 2 positive integers"""
-        if not isinstance(value, tuple) or len(value) != 2:
-            for element in value:
-                if not isinstance(element, int) or element < 0:
-                    raise TypeError("position must be a tuple \
-of 2 positive integers")
         else:
-            self.__position = value
+            for i in range(self.position[1]):
+                print()
+            for i in range(0, self.size):
+                for k in range(self.position[0]):
+                    print(" ", end='')
+                for j in range(self.size):
+                    print("#", end='')
+                print()
