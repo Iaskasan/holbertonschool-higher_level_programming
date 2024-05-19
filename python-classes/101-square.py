@@ -64,11 +64,3 @@ class Square:
                 else:
                     square = f"{square}{position_x}{symbol}\n"
         return square
-
-my_square = Square(0, (0, 0))
-print(my_square)
-
-print("--")
-
-my_square = Square(5, (4, 1))
-print(my_square)
