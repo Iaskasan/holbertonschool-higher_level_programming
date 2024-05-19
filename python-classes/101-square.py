@@ -48,3 +48,19 @@ class Square:
                 for _ in range(self.size):
                     print("#", end='')
                 print()
+
+    def __str__(self):
+        square = ""
+        symbol = '#' * self.size
+        position_x = " " * self.position[0]
+        position_y = "\n" * self.position[1]
+        if not self.size:
+            square = '\n'
+        else:
+            square = f"{position_y}"
+        for i in range(self.size):
+            if i == self.size - 1:
+                square = f"{square}{position_x}{symbol}"
+            else:
+                square = f"{square}{position_x}{symbol}\n"
+        return square
