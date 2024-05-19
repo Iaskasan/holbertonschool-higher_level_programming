@@ -54,8 +54,8 @@ class Square:
         symbol = '#' * self.size
         position_x = " " * self.position[0]
         position_y = "\n" * self.position[1]
-        if not self.size:
-            square = '\n'
+        if self.size == 0:
+            return square
         else:
             square = f"{position_y}"
         for i in range(self.size):
@@ -64,3 +64,11 @@ class Square:
             else:
                 square = f"{square}{position_x}{symbol}\n"
         return square
+
+my_square = Square(0, (0, 0))
+print(my_square)
+
+print("--")
+
+my_square = Square(5, (4, 1))
+print(my_square)
