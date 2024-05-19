@@ -55,15 +55,14 @@ class Square:
         position_x = " " * self.position[0]
         position_y = "\n" * self.position[1]
         if self.size == 0:
-            square = '\n'
             return square
         else:
             square = f"{position_y}"
-        for i in range(self.size):
-            if i == self.size - 1:
-                square = f"{square}{position_x}{symbol}"
-            else:
-                square = f"{square}{position_x}{symbol}\n"
+            for i in range(self.size):
+                if i == self.size - 1:
+                    square = f"{square}{position_x}{symbol}"
+                else:
+                    square = f"{square}{position_x}{symbol}\n"
         return square
 
 my_square = Square(0, (0, 0))
