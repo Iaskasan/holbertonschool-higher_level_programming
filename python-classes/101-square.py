@@ -55,6 +55,7 @@ class Square:
         position_x = " " * self.position[0]
         position_y = "\n" * self.position[1]
         if self.size == 0:
+            square = '\n'
             return square
         else:
             square = f"{position_y}"
