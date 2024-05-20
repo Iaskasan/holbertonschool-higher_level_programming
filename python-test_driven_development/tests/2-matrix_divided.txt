@@ -1,0 +1,43 @@
+This is the test file for the module 2-matrix_divided.py
+
+First importing the method from the module:
+-------------------------------------------
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Testing empty argument
+---------------------------
+
+>>> matrix_divided()
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/2-matrix_divided.py", line 20, in <module>
+    print(matrix_divided())
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Testing empty matrix
+--------------------
+
+>>> matrix_divided([[]], 5)
+[[]]
+
+Testing matrix != list(list(int))
+---------------------------------
+
+>>> matrix_divided(1, 5)
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/2-matrix_divided.py", line 21, in <module>
+    print(matrix_divided(1, 5))
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/2-matrix_divided.py", line 6, in matrix_divided
+    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing div == 0
+----------------
+
+>>> matrix_divided([[1, 2 ,3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/2-matrix_divided.py", line 32, in <module>
+    print(matrix_divided(matrix, 0))
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/2-matrix_divided.py", line 20, in matrix_divided
+    raise ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
