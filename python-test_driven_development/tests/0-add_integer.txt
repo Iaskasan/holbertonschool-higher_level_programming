@@ -78,3 +78,24 @@ Traceback (most recent call last):
   File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/0-add_integer.py", line 8, in add_integer
     raise TypeError("a must be an integer")
 TypeError: a must be an integer
+
+Testing float overflow
+----------------------
+
+>>> add_integer(float("inf"))
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/0-add_integer.py", line 13, in <module>
+    print(add_integer(float("inf")))
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/0-add_integer.py", line 11, in add_integer
+    return int(a) + int(b)
+OverflowError: cannot convert float infinity to integer
+
+Testing NaN as float
+
+>>> add_integer(float("NaN"))
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/0-add_integer.py", line 13, in <module>
+    print(add_integer(float("NaN")))
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/0-add_integer.py", line 11, in add_integer
+    return int(a) + int(b)
+ValueError: cannot convert float NaN to integer
