@@ -9,10 +9,11 @@ def text_indentation(text):
     prev = False
     for char in text:
         if char == ' ' and prev:
-            print(char)
             prev = False
+            continue
         elif char in (".", "?", ":"):
             print(char)
+            print()
             prev = True
         else:
             print(char, end="")
