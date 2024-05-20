@@ -1,4 +1,4 @@
-This is the test file for the module 2-matrix_divided.py
+This is the test file for the module 3-say_my_name.py
 
 First importing the method from the module:
 -------------------------------------------
