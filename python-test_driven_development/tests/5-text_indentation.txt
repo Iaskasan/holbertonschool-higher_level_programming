@@ -70,4 +70,5 @@ Testing without specials characters not followed by a space
 
 >>> text_indentation("Holberton.School")
 Holberton.
+<BLANKLINE>
 School
