@@ -36,3 +36,14 @@ Traceback (most recent call last):
   File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/3-say_my_name.py", line 12, in <module>
     say_my_name()
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Testing First_name as a string and Last_name is non string
+----------------------------------------------------------
+
+>>> say_my_name("Walter", 5)
+Traceback (most recent call last):
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/3-say_my_name.py", line 13, in <module>
+    say_my_name("Walter", 5)
+  File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
