@@ -6,14 +6,13 @@ def text_indentation(text):
     '''indent the input string by adding new lines and removing spaces'''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    next_is_space = False
+    prev = False
     for char in text:
-        if char in (".", "?", ":"):
+        if char == ' ' and prev:
             print(char)
-            print()
-            next_is_space = True
-        elif next_is_space:
-            next_is_space = False
-            continue
+            prev = False
+        elif char in (".", "?", ":"):
+            print(char)
+            prev = True
         else:
             print(char, end="")

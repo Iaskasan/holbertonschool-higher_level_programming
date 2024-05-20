@@ -64,3 +64,10 @@ Traceback (most recent call last):
   File "/home/iaskasan/holbertonschool-higher_level_programming-2/python-test_driven_development/5-text_indentation.py", line 21, in <module>
     text_indentation()
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Testing without specials characters not followed by a space
+-----------------------------------------------------------
+
+>>> text_indentation("Holberton.School)
+Holberton.
+School
