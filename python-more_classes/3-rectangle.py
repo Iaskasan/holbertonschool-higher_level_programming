@@ -43,6 +43,8 @@ class Rectangle:
     def __str__(self) -> str:
         rectangle = ""
         symbol = "#" * self.width
+        if self.width == 0 or self.height == 0:
+            return rectangle
         for i in range(self.height):
             if i == self.height - 1:
                 rectangle = f"{rectangle}{symbol}"
