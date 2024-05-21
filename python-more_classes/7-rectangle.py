@@ -5,11 +5,13 @@
 class Rectangle:
     '''Class rectangle, empty for now'''
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        self.print_symbol = "#"
+        Rectangle.number_of_instances += 1
+        Rectangle.print_symbol = self.print_symbol
 
     @property
     def width(self):
@@ -45,7 +47,7 @@ class Rectangle:
 
     def __str__(self) -> str:
         rectangle = ""
-        symbol = self.print_symbol * self.width
+        symbol = str(self.print_symbol) * self.width
         if self.width == 0 or self.height == 0:
             return rectangle
         for i in range(self.height):
