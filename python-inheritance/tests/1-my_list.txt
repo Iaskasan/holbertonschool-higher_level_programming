@@ -1,12 +1,32 @@
 This is the test file for the module 1-my_list.py.
 
-First importing the method from the module:
+First importing the method and class from the module:
 -------------------------------------------
 
 >>> print_sorted = __import__('1-my_list').MyList.print_sorted
+>>> MyList = __import__('1-my_list').MyList
 
 Testing simple addition with integers:
 --------------------------------------
 
 >>> print_sorted([1, 4, 2, 3, 5])
 [1, 2, 3, 4, 5]
+
+Testing instantiation
+---------------------
+
+>>> my_list = MyList([1, 4, 2, 3, 5])
+>>> print_sorted(my_list)
+[1, 2, 3, 4, 5]
+
+Testing the inheritance
+-----------------------
+
+>>> print(issubclass(MyList, list))
+True
+
+Testing the __str__ method
+--------------------------
+
+>>> print(MyList)
+<class '1-my_list.MyList'>
