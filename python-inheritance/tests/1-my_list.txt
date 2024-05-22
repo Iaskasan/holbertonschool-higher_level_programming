@@ -3,10 +3,10 @@ This is the test file for the module 1-my_list.py.
 First importing the method from the module:
 -------------------------------------------
 
->>> print_sorted = __import__('1-my_list').print_sorted()
+>>> print_sorted = __import__('1-my_list').MyList.print_sorted
 
 Testing simple addition with integers:
 --------------------------------------
 
->>> my_list.print_sorted([1, 4, 2, 3, 5])
+>>> print_sorted([1, 4, 2, 3, 5])
 [1, 2, 3, 4, 5]
