@@ -36,8 +36,7 @@ Testing an empty list
 
 >>> MyList.print_sorted()
 Traceback (most recent call last):
-  File "/root/holbertonschool-higher_level_programming-1/python-inheritance/1-my_list.py", line 11, in <module>
-    MyList.print_sorted()
+    ...
 TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
 
 Testing a list with negative numbers:
