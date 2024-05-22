@@ -72,3 +72,15 @@ Testing without specials characters not followed by a space
 Holberton.
 <BLANKLINE>
 School
+
+Testing a special string
+------------------------
+
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John

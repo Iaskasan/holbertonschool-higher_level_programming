@@ -17,3 +17,5 @@ def text_indentation(text):
             prev = True
         else:
             print(char, end="")
+
+text_indentation("Holberton. School? How are you: John")
