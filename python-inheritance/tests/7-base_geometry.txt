@@ -1,0 +1,24 @@
+This is the test file for the module 7-base_geometry.py.
+
+First importing the method and class from the module:
+-----------------------------------------------------
+
+>>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Testing with expected input
+---------------------------
+
+>>> print(BaseGeometry.integer_validator(BaseGeometry, "a", 1))
+True
+
+Testing with negative value
+---------------------------
+
+>>> print(BaseGeometry.integer_validator(BaseGeometry, "a", -1))
+Traceback (most recent call last):
+  File "/root/holbertonschool-higher_level_programming-1/python-inheritance/7-base_geometry.py", line 21, in <module>
+    print(BaseGeometry.integer_validator(BaseGeometry, "a", -1))
+  File "/root/holbertonschool-higher_level_programming-1/python-inheritance/7-base_geometry.py", line 16, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: a must be greater than 0

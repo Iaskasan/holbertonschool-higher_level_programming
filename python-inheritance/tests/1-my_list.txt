@@ -1,7 +1,7 @@
 This is the test file for the module 1-my_list.py.
 
 First importing the method and class from the module:
--------------------------------------------
+-----------------------------------------------------
 
 >>> print_sorted = __import__('1-my_list').MyList.print_sorted
 >>> MyList = __import__('1-my_list').MyList
