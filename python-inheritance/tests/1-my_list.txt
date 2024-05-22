@@ -34,10 +34,8 @@ False
 Testing an empty list
 ---------------------
 
->>> MyList.print_sorted()
-Traceback (most recent call last):
-    ...
-TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
+>>> MyList.print_sorted([])
+[]
 
 Testing a list with negative numbers:
 -------------------------------------
