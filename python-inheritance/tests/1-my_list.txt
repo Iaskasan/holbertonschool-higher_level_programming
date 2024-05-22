@@ -50,3 +50,11 @@ Testing list append
 >>> new_list.append(1)
 >>> print(new_list)
 [1, 2, 4, 3, 1]
+
+Testing if it returns a new list
+--------------------------------
+
+>>> my_list_1 = MyList([1, 3, 2])
+>>> print(my_list_1 == MyList.print_sorted(my_list_1))
+[1, 2, 3]
+False
