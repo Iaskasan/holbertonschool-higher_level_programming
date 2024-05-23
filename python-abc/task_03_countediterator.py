@@ -15,4 +15,4 @@ class CountedIterator:
         return next(self.iter)
 
     def get_count(self):
-        return self.count
+        return iter(self.count)
