@@ -54,7 +54,7 @@ Testing list append
 Testing if it returns a new list
 --------------------------------
 
->>> my_list_1 = MyList([1, 3, 2])
->>> print(my_list_1 == MyList.print_sorted(my_list_1))
-[1, 2, 3]
-False
+>>> new_list = MyList.print_sorted([1, 2, 4, 6])
+[1, 2, 4, 6]
+>>> print(isinstance(new, list))
+true
