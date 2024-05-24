@@ -1,60 +1,35 @@
-This is the test file for the module 1-my_list.py.
+Test de la fonction ``def print_sorted(self):`` en Python
+======================
 
-First importing the method and class from the module:
------------------------------------------------------
-
->>> print_sorted = __import__('1-my_list').MyList.print_sorted
+Cette fonction divise tous les éléments d'une matice
+-------------------
 >>> MyList = __import__('1-my_list').MyList
+>>> that_list = MyList([3, 9, 12, 15])
+>>> a = that_list.print_sorted()
+[3, 9, 12, 15]
 
-Testing simple addition with integers:
---------------------------------------
+>>> that_list2 = MyList([15, 9, 12, 3])
+>>> a = that_list2.print_sorted()
+[3, 9, 12, 15]
 
->>> print_sorted([1, 4, 2, 3, 5])
-[1, 2, 3, 4, 5]
+>>> a = MyList.print_sorted([9, 15, 12, 3])
+[3, 9, 12, 15]
 
-Testing instantiation
----------------------
-
->>> my_list = MyList([1, 4, 2, 3, 5])
->>> print_sorted(my_list)
-[1, 2, 3, 4, 5]
-
-Testing the inheritance
------------------------
-
->>> print(issubclass(MyList, list))
-True
-
-Testing the __str__ method
---------------------------
-
->>> print("__str__" in MyList.__dict__)
-False
-
-Testing an empty list
----------------------
-
->>> MyList.print_sorted([])
+>>> a = MyList.print_sorted([])
 []
 
-Testing a list with negative numbers:
--------------------------------------
+>>> print(MyList())
+[]
 
->>> MyList.print_sorted([1, -3, 6, 2])
-[-3, 1, 2, 6]
+>>> that_list3 = MyList()
+>>> that_list3.append(1)
+>>> print(that_list3)
+[1]
 
-Testing list append
--------------------
+>>> a = MyList.print_sorted([9, -2, 12, 3])
+[-2, 3, 9, 12]
 
->>> new_list = MyList([1, 2, 4, 3])
->>> new_list.append(1)
->>> print(new_list)
-[1, 2, 4, 3, 1]
-
-Testing if it returns a new list
---------------------------------
-
->>> new_list = MyList.print_sorted([1, 2, 4, 6])
-[1, 2, 4, 6]
->>> print(isinstance(new, list))
-true
+>>> new_list = MyList.print_sorted([9, -2, 12, 3])
+[-2, 3, 9, 12]
+>>> isinstance(new_list, list)
+True
