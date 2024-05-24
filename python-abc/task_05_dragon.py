@@ -25,4 +25,4 @@ class Dragon(FlyMixin, SwimMixin):
     both from FlyMixin and SwimMiwin
     '''
     def roar(self):
-        print("Roooooaaarrr!")
+        print("The dragon roars!")
