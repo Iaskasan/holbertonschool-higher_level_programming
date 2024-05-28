@@ -167,3 +167,4 @@ test.py
 test_my_list.py
 *_*_*.txt
 *.json
+*.pkl
