@@ -1,4 +1,5 @@
 import pickle
+'''Module for the class CustomObject'''
 
 
 class CustomObject:
