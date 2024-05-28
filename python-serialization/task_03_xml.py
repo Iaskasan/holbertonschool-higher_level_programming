@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Module that serialize and deserialize data to xml/from xml"""
 import xml.etree.ElementTree as ET
 
