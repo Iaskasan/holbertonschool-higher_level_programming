@@ -1,9 +1,11 @@
 import requests
 import json
 import csv
+'''module to fetch and print posts from the API'''
 
 
 def fetch_and_print_posts():
+    '''function to fetch and print posts from the API'''
     url = "https://jsonplaceholder.typicode.com/posts"
     r = requests.get(url)
     print("Status Code:", r.status_code)
@@ -14,6 +16,7 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
+    '''function to fetch and save posts from the API to json and csv files'''
     url = "https://jsonplaceholder.typicode.com/posts"
     r = requests.get(url)
     print("Status Code:", r.status_code)
