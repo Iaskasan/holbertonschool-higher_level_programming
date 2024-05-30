@@ -30,7 +30,7 @@ def fetch_and_save_posts():
         with open("posts.json", "w") as f:
             json.dump(data_list, f)
         with open("posts.csv", "w", newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(data_list[0].keys())
+            writer = csv.DictWriter(f, fieldnames=["userId", "id", "title", "body"])
+            writer.writeheader()
             for element in data_list:
-                writer.writerow(element.values())
+                writer.writerow(element)
