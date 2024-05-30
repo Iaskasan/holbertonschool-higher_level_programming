@@ -33,7 +33,3 @@ def fetch_and_save_posts():
             writer.writerow(data_list[0].keys())
             for element in data_list:
                 writer.writerow(element.values())
-
-if __name__ == "__main__":
-    # fetch_and_print_posts()
-    fetch_and_save_posts()
