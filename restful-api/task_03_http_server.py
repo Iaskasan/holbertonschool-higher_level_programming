@@ -1,14 +1,16 @@
 import http.server
 import socketserver
 import json
-
+'''module to create a simple http server'''
 
 PORT = 8000
 
 
 class RequestHandler(http.server.BaseHTTPRequestHandler):
+    '''class to handle requests to the server'''
 
     def do_GET(self):
+        '''method to handle GET requests to the server'''
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-Type", "Text/html")
