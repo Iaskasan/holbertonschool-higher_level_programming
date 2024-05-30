@@ -20,7 +20,6 @@ def fetch_and_save_posts():
     '''function to fetch and save posts from the API to json and csv files'''
     url = "https://jsonplaceholder.typicode.com/posts"
     r = requests.get(url)
-    print("Status Code:", r.status_code)
     if r.status_code == 200:
         data = r.json()
         data_list = []
@@ -33,3 +32,6 @@ def fetch_and_save_posts():
             writer.writeheader()
             for element in data_list:
                 writer.writerow(element)
+
+fetch_and_print_posts()
+fetch_and_save_posts()
