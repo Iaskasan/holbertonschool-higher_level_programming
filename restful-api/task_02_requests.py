@@ -32,6 +32,3 @@ def fetch_and_save_posts():
             writer.writeheader()
             for element in data_list:
                 writer.writerow(element)
-
-fetch_and_print_posts()
-fetch_and_save_posts()
