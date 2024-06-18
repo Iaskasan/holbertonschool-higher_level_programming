@@ -6,4 +6,4 @@ WHERE state_id = (
     FROM hbtn_0d_usa.states
     WHERE name = 'California'
 )
-ORDER BY id ASC;
+ORDER BY cities.id ASC;
