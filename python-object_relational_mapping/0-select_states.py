@@ -21,7 +21,7 @@ if __name__ == "__main__":
                         )
 
     c = db.cursor()
-    c.execute("""SELECT * from states ORDER BY name ASC""")
+    c.execute("""SELECT * from states ORDER BY id ASC""")
 
     rows = c.fetchall()
 
