@@ -23,7 +23,8 @@ if __name__ == "__main__":
 
     c = db.cursor()
     c.execute(f"""SELECT * FROM states WHERE
-              name LIKE '{state_name_searched}' ORDER BY id ASC""")
+              name LIKE '{state_name_searched}'
+              ORDER BY id ASC""")
 
     rows = c.fetchall()
 
