@@ -24,8 +24,8 @@ if __name__ == "__main__":
 
     c = db.cursor()
 
-    query = """SELECT * FROM states WHERE name = %s ORDER BY id ASC"""
-    c.execute(query, (state_name_searched,))
+    c.execute("""SELECT * FROM states WHERE
+              name = %s ORDER BY id ASC""", (state_name_searched,))
 
     rows = c.fetchall()
 
