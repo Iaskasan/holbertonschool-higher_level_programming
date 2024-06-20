@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""Module that prints all states by ASCENDING order"""
 import MySQLdb
 import sys
-"""Module that prints all states by ASCENDING order"""
 
 if __name__ == "__main__":
     """
