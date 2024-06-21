@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Module that prints all states by ASCENDING order"""
+
+
 import MySQLdb
 import sys
-import mysql.connector
 
 if __name__ == "__main__":
     """
