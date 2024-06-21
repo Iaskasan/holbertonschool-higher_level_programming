@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module that prints all states by ASCENDING order"""
+
+
 import MySQLdb
 import sys
 
