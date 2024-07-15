@@ -170,3 +170,5 @@ test_my_list.py
 *.pkl
 *.csv
 *.sql
+
+*.txt
