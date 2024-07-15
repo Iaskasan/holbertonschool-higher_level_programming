@@ -1,3 +1,6 @@
+import os
+
+
 def generate_invitations(template, attendees):
     # Check input types
     if not isinstance(template, str):
@@ -23,7 +26,14 @@ def generate_invitations(template, attendees):
 
         # Check for any remaining placeholders and replace them with "N/A"
         processed_template = processed_template.replace("{", "").replace("}", "N/A")
+        # Check if file already exists
+        if os.path.exists(f"output_{index}.txt"):
+            print(f"Error: File output_{index}.txt already exists.")
+            continue
 
         # Generate output files
-        with open(f"output_{index}.txt", "w") as file:
-            file.write(processed_template)
+        try:
+            with open(f"output_{index}.txt", "w") as file:
+                file.write(processed_template)
+        except IOError as e:
+            print(f"Error: Failed to write to file output_{index}.txt - {e}")
