@@ -18,11 +18,7 @@ def contact():
 @app.route('/items')
 def items():
     items = load_items()
-    if not items:
-        message = "No items found."
-    else:
-        message = ""
-    return render_template('items.html', items=items, message=message)
+    return render_template('items.html', items=items)
 
 def load_items():
     with open('python-server_side_rendering/items.json', 'r') as f:
